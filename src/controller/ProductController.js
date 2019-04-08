@@ -13,7 +13,7 @@ module.exports = {
         }
     },
 
-    async create(req, res) {
+    async store(req, res) {
         const products = await Product.create(req.body)
         return res.status(process.env.STATUS_CODE_CREATE).json(products)
     }
